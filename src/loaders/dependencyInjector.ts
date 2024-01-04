@@ -1,11 +1,10 @@
 import { Container } from 'typedi';
-import formData from 'form-data';
 // import Mailgun from 'mailgun.js';
 import LoggerInstance from './logger';
 // import agendaFactory from './agenda';
 import config from '../config';
 
-export default ({  models }: { models: { name: string; model: any }[] }) => {
+export default ({ models }: { models: { name: string; model: any }[] }) => {
   try {
     models.forEach(m => {
       Container.set(m.name, m.model);
