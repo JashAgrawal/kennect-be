@@ -1,0 +1,604 @@
+{
+    "info": {
+      "name": "kennect-db",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+			"name": "auth",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+              "mode": "raw",
+              "raw": "{   \"User_Name\":\"User_Name\",\"Email\":\"Email@gmail.com\",\"Password\":\"abc\"  }",
+              "options": {
+                  "raw": {
+                      "language": "json"
+                  }
+              }
+          },
+						"url": {
+							"raw": "http://localhost:3030/api/Auto/SignUp",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"Auto",
+								"SignUp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \"User_Name\":\"User_Name\",\"Email\":\"Email@gmail.com\",\"Password\":\"abc\"  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3030/api/Auto/Login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"Auto",
+								"Login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},{"name": "comments",
+    "item": [{
+          "name": "get_comments",
+          "request": {
+              "method": "GET",
+              "header": [
+                  {
+                      "key": "Accept",
+                      "value": "application/json",
+                      "type": "text"
+                  }
+              ],
+              "body": {
+    "mode": "formdata",
+    "formdata": [
+        {
+                    "key": "commentId",
+                    "type": "text",
+                    "value": "Abc"
+                },
+{
+                    "key": "text",
+                    "type": "text",
+                    "value": "Abc"
+                },
+{
+                    "key": "userId",
+                    "type": "text",
+                    "value": "Abc"
+                },
+{
+                    "key": "postId",
+                    "type": "text",
+                    "value": "Abc"
+                }
+    ]
+    },
+              "url": {
+                  "raw": "http://localhost:3030/api/Auto/getcomments",
+                  "protocol": "http",
+                  "host": [
+                      "localhost"
+                  ],
+                  "port": "3030",
+                  "path": [
+                      "api",
+                      "Auto",
+                      "getcomments"
+                  ]
+              }
+          },
+          "response": []
+      }]},{"name": "comments",
+    "item": [{
+          "name": "delete_comments",
+          "request": {
+              "method": "POST",
+              "header": [
+                  {
+                      "key": "Accept",
+                      "value": "application/json",
+                      "type": "text"
+                  }
+              ],
+              "body": {
+    "mode": "formdata",
+    "formdata": [
+        {
+                    "key": "commentId",
+                    "type": "text",
+                    "value": "Abc"
+                },
+{
+                    "key": "text",
+                    "type": "text",
+                    "value": "Abc"
+                },
+{
+                    "key": "userId",
+                    "type": "text",
+                    "value": "Abc"
+                },
+{
+                    "key": "postId",
+                    "type": "text",
+                    "value": "Abc"
+                }
+    ]
+    },
+              "url": {
+                  "raw": "http://localhost:3030/api/Auto/deletecomments",
+                  "protocol": "http",
+                  "host": [
+                      "localhost"
+                  ],
+                  "port": "3030",
+                  "path": [
+                      "api",
+                      "Auto",
+                      "deletecomments"
+                  ]
+              }
+          },
+          "response": []
+      }]},{"name": "comments",
+    "item": [{
+          "name": "getById_comments",
+          "request": {
+              "method": "GET",
+              "header": [
+                  {
+                      "key": "Accept",
+                      "value": "application/json",
+                      "type": "text"
+                  }
+              ],
+              "body": {
+    "mode": "formdata",
+    "formdata": [
+        {
+                    "key": "commentId",
+                    "type": "text",
+                    "value": "Abc"
+                },
+{
+                    "key": "text",
+                    "type": "text",
+                    "value": "Abc"
+                },
+{
+                    "key": "userId",
+                    "type": "text",
+                    "value": "Abc"
+                },
+{
+                    "key": "postId",
+                    "type": "text",
+                    "value": "Abc"
+                }
+    ]
+    },
+              "url": {
+                  "raw": "http://localhost:3030/api/Auto/getByIdcomments",
+                  "protocol": "http",
+                  "host": [
+                      "localhost"
+                  ],
+                  "port": "3030",
+                  "path": [
+                      "api",
+                      "Auto",
+                      "getByIdcomments"
+                  ]
+              }
+          },
+          "response": []
+      }]},{"name": "posts",
+    "item": [{
+          "name": "getById_posts",
+          "request": {
+              "method": "GET",
+              "header": [
+                  {
+                      "key": "Accept",
+                      "value": "application/json",
+                      "type": "text"
+                  }
+              ],
+              "body": {
+    "mode": "formdata",
+    "formdata": [
+        {
+                    "key": "post_id",
+                    "type": "text",
+                    "value": "Abc"
+                },
+{
+                    "key": "text",
+                    "type": "text",
+                    "value": "Abc"
+                },
+{
+                    "key": "comments",
+                    "type": "text",
+                    "value": "Abc"
+                },
+{
+                    "key": "userId",
+                    "type": "text",
+                    "value": "Abc"
+                }
+    ]
+    },
+              "url": {
+                  "raw": "http://localhost:3030/api/Auto/getByIdposts",
+                  "protocol": "http",
+                  "host": [
+                      "localhost"
+                  ],
+                  "port": "3030",
+                  "path": [
+                      "api",
+                      "Auto",
+                      "getByIdposts"
+                  ]
+              }
+          },
+          "response": []
+      }]},{"name": "posts",
+    "item": [{
+          "name": "get_posts",
+          "request": {
+              "method": "GET",
+              "header": [
+                  {
+                      "key": "Accept",
+                      "value": "application/json",
+                      "type": "text"
+                  }
+              ],
+              "body": {
+    "mode": "formdata",
+    "formdata": [
+        {
+                    "key": "post_id",
+                    "type": "text",
+                    "value": "Abc"
+                },
+{
+                    "key": "text",
+                    "type": "text",
+                    "value": "Abc"
+                },
+{
+                    "key": "comments",
+                    "type": "text",
+                    "value": "Abc"
+                },
+{
+                    "key": "userId",
+                    "type": "text",
+                    "value": "Abc"
+                }
+    ]
+    },
+              "url": {
+                  "raw": "http://localhost:3030/api/Auto/getposts",
+                  "protocol": "http",
+                  "host": [
+                      "localhost"
+                  ],
+                  "port": "3030",
+                  "path": [
+                      "api",
+                      "Auto",
+                      "getposts"
+                  ]
+              }
+          },
+          "response": []
+      }]},{"name": "posts",
+    "item": [{
+          "name": "delete_posts",
+          "request": {
+              "method": "POST",
+              "header": [
+                  {
+                      "key": "Accept",
+                      "value": "application/json",
+                      "type": "text"
+                  }
+              ],
+              "body": {
+    "mode": "formdata",
+    "formdata": [
+        {
+                    "key": "post_id",
+                    "type": "text",
+                    "value": "Abc"
+                },
+{
+                    "key": "text",
+                    "type": "text",
+                    "value": "Abc"
+                },
+{
+                    "key": "comments",
+                    "type": "text",
+                    "value": "Abc"
+                },
+{
+                    "key": "userId",
+                    "type": "text",
+                    "value": "Abc"
+                }
+    ]
+    },
+              "url": {
+                  "raw": "http://localhost:3030/api/Auto/deleteposts",
+                  "protocol": "http",
+                  "host": [
+                      "localhost"
+                  ],
+                  "port": "3030",
+                  "path": [
+                      "api",
+                      "Auto",
+                      "deleteposts"
+                  ]
+              }
+          },
+          "response": []
+      }]},{"name": "comments",
+    "item": [{
+          "name": "create_comments",
+          "request": {
+              "method": "POST",
+              "header": [
+                  {
+                      "key": "Accept",
+                      "value": "application/json",
+                      "type": "text"
+                  }
+              ],
+              "body": {
+    "mode": "formdata",
+    "formdata": [
+        {
+                    "key": "commentId",
+                    "type": "text",
+                    "value": "Abc"
+                },
+{
+                    "key": "text",
+                    "type": "text",
+                    "value": "Abc"
+                },
+{
+                    "key": "userId",
+                    "type": "text",
+                    "value": "Abc"
+                },
+{
+                    "key": "postId",
+                    "type": "text",
+                    "value": "Abc"
+                }
+    ]
+    },
+              "url": {
+                  "raw": "http://localhost:3030/api/Auto/createcomments",
+                  "protocol": "http",
+                  "host": [
+                      "localhost"
+                  ],
+                  "port": "3030",
+                  "path": [
+                      "api",
+                      "Auto",
+                      "createcomments"
+                  ]
+              }
+          },
+          "response": []
+      }]},{"name": "posts",
+    "item": [{
+          "name": "update_posts",
+          "request": {
+              "method": "POST",
+              "header": [
+                  {
+                      "key": "Accept",
+                      "value": "application/json",
+                      "type": "text"
+                  }
+              ],
+              "body": {
+    "mode": "formdata",
+    "formdata": [
+        {
+                    "key": "post_id",
+                    "type": "text",
+                    "value": "Abc"
+                },
+{
+                    "key": "text",
+                    "type": "text",
+                    "value": "Abc"
+                },
+{
+                    "key": "comments",
+                    "type": "text",
+                    "value": "Abc"
+                },
+{
+                    "key": "userId",
+                    "type": "text",
+                    "value": "Abc"
+                }
+    ]
+    },
+              "url": {
+                  "raw": "http://localhost:3030/api/Auto/updateposts",
+                  "protocol": "http",
+                  "host": [
+                      "localhost"
+                  ],
+                  "port": "3030",
+                  "path": [
+                      "api",
+                      "Auto",
+                      "updateposts"
+                  ]
+              }
+          },
+          "response": []
+      }]},{"name": "comments",
+    "item": [{
+          "name": "update_comments",
+          "request": {
+              "method": "POST",
+              "header": [
+                  {
+                      "key": "Accept",
+                      "value": "application/json",
+                      "type": "text"
+                  }
+              ],
+              "body": {
+    "mode": "formdata",
+    "formdata": [
+        {
+                    "key": "commentId",
+                    "type": "text",
+                    "value": "Abc"
+                },
+{
+                    "key": "text",
+                    "type": "text",
+                    "value": "Abc"
+                },
+{
+                    "key": "userId",
+                    "type": "text",
+                    "value": "Abc"
+                },
+{
+                    "key": "postId",
+                    "type": "text",
+                    "value": "Abc"
+                }
+    ]
+    },
+              "url": {
+                  "raw": "http://localhost:3030/api/Auto/updatecomments",
+                  "protocol": "http",
+                  "host": [
+                      "localhost"
+                  ],
+                  "port": "3030",
+                  "path": [
+                      "api",
+                      "Auto",
+                      "updatecomments"
+                  ]
+              }
+          },
+          "response": []
+      }]},{"name": "posts",
+    "item": [{
+          "name": "create_posts",
+          "request": {
+              "method": "POST",
+              "header": [
+                  {
+                      "key": "Accept",
+                      "value": "application/json",
+                      "type": "text"
+                  }
+              ],
+              "body": {
+    "mode": "formdata",
+    "formdata": [
+        {
+                    "key": "post_id",
+                    "type": "text",
+                    "value": "Abc"
+                },
+{
+                    "key": "text",
+                    "type": "text",
+                    "value": "Abc"
+                },
+{
+                    "key": "comments",
+                    "type": "text",
+                    "value": "Abc"
+                },
+{
+                    "key": "userId",
+                    "type": "text",
+                    "value": "Abc"
+                }
+    ]
+    },
+              "url": {
+                  "raw": "http://localhost:3030/api/Auto/createposts",
+                  "protocol": "http",
+                  "host": [
+                      "localhost"
+                  ],
+                  "port": "3030",
+                  "path": [
+                      "api",
+                      "Auto",
+                      "createposts"
+                  ]
+              }
+          },
+          "response": []
+      }]}]
+    }
