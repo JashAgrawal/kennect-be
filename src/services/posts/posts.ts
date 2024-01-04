@@ -1,5 +1,5 @@
-import Helper from '@/helpers';
-import Comments from '@/models/comments/comments';
+import Helper from '../../helpers';
+import Comments from '../../models/comments/comments';
 import { Service, Inject } from 'typedi';
 @Service()
 export default class postsService {

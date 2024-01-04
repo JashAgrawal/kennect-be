@@ -2,8 +2,8 @@ import express from 'express';
 import cors from 'cors';
 import { OpticMiddleware } from '@useoptic/express-middleware';
 import responseHandler from 'express-response-handler';
-import routes from '@/api';
-import config from '@/config';
+import routes from '../api/';
+import config from '../config/';
 export default ({ app }: { app: express.Application }) => {
   /**
    * Health Check endpoints
@@ -28,7 +28,7 @@ export default ({ app }: { app: express.Application }) => {
     ['Deleted', 'success', 207],
     ['PartialContent', 'error', 208],
     ['AlreadyExists', 'error', 409],
-    ['Default', 'error', 500]
+    ['Default', 'error', 500],
   ];
   app.use(responseHandler(customCodes));
   // Useful if you're behind a reverse proxy (Heroku, Bluemix, AWS ELB, Nginx, etc)
@@ -51,9 +51,11 @@ export default ({ app }: { app: express.Application }) => {
   app.use(config.api.prefix, routes());
 
   // API Documentation
-  app.use(OpticMiddleware({
+  app.use(
+    OpticMiddleware({
       enabled: process.env.NODE_ENV !== 'production',
-  }));
+    }),
+  );
 
   /// catch 404 and forward to error handler
   app.use((req, res, next) => {
@@ -68,10 +70,7 @@ export default ({ app }: { app: express.Application }) => {
      * Handle 401 thrown by express-jwt library
      */
     if (err.name === 'UnauthorizedError') {
-      return res
-        .status(err.status)
-        .send({ message: err.message })
-        .end();
+      return res.status(err.status).send({ message: err.message }).end();
     }
     return next(err);
   });

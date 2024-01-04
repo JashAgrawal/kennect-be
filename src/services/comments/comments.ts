@@ -1,4 +1,4 @@
-import Helper from '@/helpers';
+import Helper from '../../helpers';
 import { Service, Inject } from 'typedi';
 @Service()
 export default class commentsService {
